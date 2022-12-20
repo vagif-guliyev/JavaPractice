@@ -4,6 +4,8 @@
 
 package com.mycompany.firstproject;
 
+import java.util.Scanner;
+
 /**
  *
  * @author vaqifquliyev
@@ -11,27 +13,30 @@ package com.mycompany.firstproject;
 public class FirstProject {
 
     public static void main(String[] args) {
-        int x = 5;
-        int y = 10;
-        int z = x + y;
-        System.out.println(z);
         
-        int c = x - y;
-        System.out.println(c);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println("Enter b: ");
+        int b = sc.nextInt();
+        System.out.println("Enter operation: ");
+        int op = sc.nextInt();
         
-        int v = x * y;
-        System.out.println(v);
+        int result = 0;
         
-        double a = 15;
-        double b = 4;
-        double bolme = a/b;
-        System.out.println(bolme);
+        if(op == 1) {
+            result = a + b;
+        } else if (op == 2) {
+            result = a - b;
+        } else if (op == 3) {
+            result = a / b;
+        } else if (op == 4) {
+            result = a % b;
+        } else {
+            System.out.println("Type again");
+        }
         
-        char vaqif = 'v';
-        System.out.println(vaqif);
-        
-        String vagif = "vagif";
-        System.out.println(vagif);
+        System.out.println(result);
         
     }
 }
